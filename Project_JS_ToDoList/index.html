@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="something" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DuDu" />
+    <!-- <base target="_blank"/> -->
+
+    <!-- icon region -->
+    <!-- <link rel="shortcut icon" href="" />
+    <link rel="bookmark" href="" /> -->
+
+    <!-- google font 的設定  放在 stylesheet前面-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- cdnjs 的 font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font 的設定  end -->
+
+    <!-- CSS設定 -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>IMinToDoList</title>
+  </head>
+  <body>
+      <header>
+          <h1>Dudu Todo List</h1>
+      </header>
+      <form action="">
+          <input type="text" maxlength = "30" name="" id="" placeholder="Thing To Do">
+          <input type="number" min="1" max="31" placeholder="M" required>
+          <input type="number" min="1" max="31" placeholder="D" required>
+          <button type="submit">Add to list</button>
+      </form>
+
+      <div class="sort">
+          <button class="sssort">Sort By Time</button>
+          <button class="desort">Sort By Time (descending)</button>
+      </div>
+      <br>
+      <br>
+      <section></section>
+  </body>
+  <script src="./app.js"></script>
+</html>

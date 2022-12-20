@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #443f3f;
+  color: antiquewhite;
+}
+
+table,
+tr,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid white;
+}
+
+th {
+  text-align: center;
+}
+
+tr, th, td {
+  padding: 0.25rem 0.25rem;
+}
+/*# sourceMappingURL=style.css.map */

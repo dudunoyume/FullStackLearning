@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="something" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DuDu" />
+    <!-- <base target="_blank"/> -->
+
+    <!-- icon region -->
+    <link rel="shortcut icon" href="" />
+    <link rel="bookmark" href="" />
+
+    <!-- google font 的設定  放在 stylesheet前面-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font 的設定  end -->
+
+    <!-- CSS設定 -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>First EJS</title>
+    <h1>Your first ejs</h1>
+  </head>
+  <body>
+    <h1>Simple form</h1>
+    <form action="/response" method ="GET">
+      <label for="fullname">Name:</label>
+      <input type="text" id ="fullname" name="fullname">
+      <label for="age">Age:</label>
+      <input type="number" id = "age" name="age">
+      <button>Submit</button>
+    </form>
+    <br>
+    <section>
+      <h1>Commmon programming language</h1>
+      <% lang.forEach(lang => { %>
+        <p><%= lang.name %></p><%       
+      }) %> 
+      
+      <table>
+      <tr>
+        <th>name</th>
+        <th>rating</th>
+        <th>popularity</th>
+        <th>trending</th>
+      </tr>
+      <% lang.forEach(lang => { %>
+        <tr>
+          <td>
+            <%=lang.name %> 
+          </td>
+          <td>
+            <%=lang.rating %> 
+          </td>
+          <td>
+            <%=lang.population %> 
+          </td>
+          <td>
+            <%=lang.trending %> 
+          </td>
+        </tr>
+        <%}) %> 
+
+      
+    </table>
+
+    </section>
+
+  </body>
+  <script src="./app.js"></script>
+</html>

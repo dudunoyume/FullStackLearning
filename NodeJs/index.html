@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="something" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DuDu" />
+    <!-- <base target="_blank"/> -->
+
+    <!-- icon region -->
+    <link rel="shortcut icon" href="" />
+    <link rel="bookmark" href="" />
+
+    <!-- google font 的設定  放在 stylesheet前面-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font 的設定  end -->
+
+    <!-- CSS設定 -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <h1> This is the home page</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus culpa voluptatibus tempore fugit sit assumenda, id voluptas sapiente in totam obcaecati cum debitis porro harum voluptatem quaerat doloremque error earum.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam quidem repellendus, libero eum repellat sit possimus voluptate error mollitia consequuntur animi, repudiandae blanditiis inventore! Odit dolor nihil accusantium. Dolor, beatae?</p>
+    <form action="formHandling" method="POST">
+      <label for="name">YOUR NAME:</label>
+      <input type="text", id ="name" name="fullname"/>
+      <label for="age">YOUR AGE:</label>
+      <input type="number" id ="age" name="age"/>
+      <button type="submit">Submit</button>
+    </form>
+
+    <form action="formHandlingtwo" method="GET">
+      <label for="name">YOUR NAME:</label>
+      <input type="text", id ="name" name="fullname"/>
+      <label for="age">YOUR AGE:</label>
+      <input type="number" id ="age" name="age"/>
+      <button type="submit">Submit</button>
+    </form>
+
+  </body>
+  <script src="./app.js"></script>
+</html>

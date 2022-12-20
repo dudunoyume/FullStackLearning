@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="something" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DuDu" />
+    <!-- <base target="_blank"/> -->
+
+    <!-- icon region -->
+    <!-- <link rel="shortcut icon" href="" /> -->
+    <!-- <link rel="bookmark" href="" /> -->
+
+    <!-- google font 的設定  放在 stylesheet前面-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font 的設定  end -->
+
+    <!-- CSS設定 -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- 這裡需要把 這個API 先用POSTMAN 打開 看看回傳的JSON格式-->
+    <title><%= djs.name%> -(<%= djs.sys.country %>)</title>
+  </head>
+  <body>
+    <h1><%= djs.name %> Weather Now</h1>
+    <table>
+        <tr>
+            <td>Main Weather</td>
+            <td><%= djs.weather[0].main%></td>
+          </tr>
+          <tr>
+            <td>Weather Description</td>
+            <td><%= djs.weather[0].description%></td>
+          </tr>
+          <tr>
+            <td>Temperature</td>
+            <td><%= newtemp %></td> 
+            <!-- 上面這個是在伺服器端先解決再用傳出來的值 -->
+          </tr>
+          <tr>
+            <td>Temperature</td>
+            <td>  <% S =  Math.round(djs.main.temp-273.15) %> <%= S%></td>
+            <!-- 直接在這裡寫上後端的程式碼 -->
+          </tr>
+    </table>
+
+  </body>
+  <script src="./app.js"></script>
+</html>

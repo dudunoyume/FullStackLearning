@@ -1,0 +1,61 @@
+/* static-----靜態的位置---------------------------------------------------------------------------------------------------------------------------------------------- */
+div.container {
+  background-color: black;
+  width: 500px;
+  height: 2000px;
+  /* position: relative; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+/* 掙脫static 設定box 在' html 標籤底下的絕對位置 ，獨立於其他的box，不依照box來排序， 如果 div.container  的 設定為 relative 就會是 container 底下的 絕對位置*/
+
+.box1 {
+  background-color: blueviolet;
+  position: absolute;
+  top: 0px;
+  right: 100px;
+}
+
+/* 移動box 不依照預設的 block 依上到下的排序 */
+.box2 {
+  background-color: blue;
+  /* 將位置在static 也就是 initial containg block 預設的位置作為參考，實現相對位置 */
+  /* 設定相對位置 可為 lef right top bottom */
+  position: relative;
+  left: 50px;
+  top: 50px;
+  /* 設定垂直關係 z 軸 index------------- 越大越上面 --------------------------------------------------------------------------------------- */
+  z-index: 1;
+}
+
+.box3 {
+  background-color: red;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------------------fixed-----------導覽列------------------------------------------------------------------------------------------------------------------------- */
+/* 最常用的!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.box4 {
+  background-color: green;
+  position: fixed;
+  top: 300px;
+  left: 150px;
+
+  width: 200px;
+  z-index: 3;
+}
+
+/* ---------------------------------------------------------------------fixed-----------導覽列------------------------------------------------------------------------------------------------------------------------- */
+
+.box5 {
+  background-color: orange;
+  positio 
+  width: 500px;
+  top: 0;
+  z-index: 4;
+}
