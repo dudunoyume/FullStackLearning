@@ -1,0 +1,101 @@
+/*  用 display 加 flex  來將 div 變為 flex， 進而排版設定*/
+div.container {
+  border: 3px solid black;
+
+  display: flex;
+  /* 設定排版的順序 */
+  /* flex-direction: row; */
+}
+
+/* 若沒有設定寬度高度， flex的寬度高度就是 字的寬度 */
+/* 若有設定寬度高度， 寬度高度設定就是 他的 最大值 */
+.box {
+  width: 250px;
+  height: 100px;
+}
+
+.box1 {
+  /* flex-grow 是用來設定基本在box 裡的縮放比 */
+  /* flex-grow: 1; */
+  /* flex-shrink 是設定彈性比例的 */
+  /* flex-shrink: 1; */
+  /* flex-basis 設定寬度的最小值 */
+  /* flex-basis: 150px; */
+  flex: 1 1 200px;
+  background-color: bisque;
+}
+
+.box2 {
+  flex-grow: 1;
+  flex-basis: 150px;
+  background-color: blue;
+}
+.box3 {
+  flex-grow: 1;
+  flex-basis: 150px;
+  background-color: violet;
+}
+.box4 {
+  flex-grow: 1;
+  flex-basis: 150px;
+  background-color: red;
+}
+.box5 {
+  flex-grow: 1;
+  flex-basis: 150px;
+  background-color: aqua;
+}
+
+div.container1 {
+  border: 3px solid black;
+
+  display: flex;
+  /* 設定排版的順序 */
+  flex-direction: row;
+  /* 加wrap 可以變成限定 內部box的寬度，頁面寬度不足時，直接換行 */
+
+  flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------------------------
+
+*/
+
+div.container2 {
+  border: 3px solid black;
+  height: 400px;
+
+  display: flex;
+  /* 設定排版的順序 */
+  flex-direction: row;
+  /* 用這個調整色塊排序位置*/
+
+  /* 調整區塊的 橫向排列*/
+  /* justify-content: end; */
+  /* justify-content: column; */
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+
+  /* 調整區塊的 直向排列*/
+
+  align-items: center;
+  /* 如果沒有設定高度則會填滿整個container */
+  /* align-items: stretch; */
+}
+
+.box10 {
+  width: 150px;
+  /* height: 100px; */
+}
+
+.box11 {
+  background-color: bisque;
+}
+
+.box21 {
+  background-color: blue;
+}
+.box31 {
+  background-color: violet;
+}

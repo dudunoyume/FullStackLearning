@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang = "zh-Hant"> <!--設定給其他人看的文字標註，不過並不影響 html內部程式-->
+    <head>
+        <meta charset = "utf-8"/> <!--文字編碼設定，盡量用utf-8 -->
+        <meta name = "viewport" content = "width=device-width , initial-scale=1">  <!--以上兩個 Meta 必須放在最上面-->
+        <!-- viewpoint 就是視窗的意思， content 設定的是  網頁的寬度就是 device 的 寬度， scale = 1 的意思 是 初始的長寬不變-->
+        <title>HOLO 問卷調查</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <!-- 這是開頭的設定 -->
+
+
+    <body>
+        <form action="" method="GET">  <!--預設是 GET ，會在URL上顯示出來keyin的資訊，還有 POST 不會-->
+            <label for="myname">姓名 :</label>     <!-- label for 可以讓你點 label 的時候 可以直接選取 id 的 name 欄位-->
+            <input id ="myname" type = "text" name="InputName" value = "John cena"
+            placeholder="請輸入真實姓名"/>  <!-- 回傳填入的--> <!--value 預設填入-->
+            <!--palceholder 可用於空框時的提醒-->
+            <br>
+            <label for="tele">電話 :</label>     <!-- label for 可以讓你點 label 的時候 可以直接選取 id 的 name 欄位-->
+            <input id ="tele" type = "text" name="telephone" placeholder="請輸入台灣電話"/>
+            <br>
+            <label for="email">信箱 :</label>   <!--必須是email格式-->
+            <input id ="email" type = "email" name="email" required/> 
+            <!-- required 必須填入不然會報錯-->
+            <br>
+            <input id ="newspaper" type = "checkbox" name="news" value = "newspaper" checked /> 
+            <!-- checkbox 的 value 有打勾才會傳出去--><!-- checked 預設打勾-->
+            <label for="newspaper"> 訂閱HOLO 電子報 </label> 
+            <input id ="einfo" type = "checkbox" name="einfo" value = "einfo" checked /> 
+            <label for="einfo"> 接收email</label>             
+            <br/>  
+            <input type="file" name = "file"/> <!--一些可以限制檔案上傳的格式的，另外再去MDn看-->
+            <br/>
+            <label for="age">年齡 :</label> <!-- number 為整數-->
+            <input id="age" type="number" name="age" value="18" min="0" max="150" required>
+            <!-- 設置 上下限 限制 填入的區間必須填入不然會報錯-->   
+            <br/>
+            <label for="weigh">體重</label> 
+            <input id="weigh" type="number" name="weigh" value="18.3" min="0" max="150" 
+                step = 0.1 required> <!-- number 可利用 step 使其變為 浮點數-->
+            <!-- 設置 上下限 限制 填入的區間必須填入不然會報錯-->   
+            <br/>
+            <!-- radio專門設計來讓你只選用一個值的，跟checkbox 很類似-->
+            <!-- 根據 name 來 辨別同一個 radio系列的-->
+            <!-- 可以使用 checked 來預設 勾選的位置 -->
+            <!--required 限制 必填但是同一系列的 radio 只需要一個就有效果-->
+            <label for="male">男</label>
+            <input type="radio" name="gender" id="male" required>
+            <label for="female">女</label>
+            <input type="radio" name="gender" id="female">
+            <label for="thirdsex">第三性</label>
+            <input type="radio" name="gender" id="thirdsex">           
+            <br/>
+            <label for="password"> 密碼: </label> <!--密碼不會顯現出來，除非用javascript--><!--設定長度-->
+            <input type="password" name="password" id="password" value="" minlength="3" maxlength="10">
+            <!-- minlength maxlength 可用於限制字元長度-->
+            <br/>
+            <!-- range 為拖拉桿-->            
+            <label for="money"> 捐款金額 :</label>
+            <input type="range" min="0" max="10000" step="10"
+            name="money" id="money" >
+
+            <br>
+            <label for="birthday"> 生日月分</label>
+            <!--select 的 option 可放一個空的 (沒有 value)讓使用者一定要下拉選擇 -->
+            <!-- 在select 上面放 required -->
+            <select name="birthday" id="birthday" required>
+                <option ></option>
+                <option value="一月">一月</option>
+                <option value="二月">二月</option>
+                <option value="三月">三月</option>
+                <option value="四月">四月</option>
+                <option value="五月">五月</option>
+                <option value="六月">六月</option>
+                <option value="七月">七月</option>
+                <option value="八月">八月</option>
+                <option value="九月">九月</option>
+                <option value="十月">十月</option>
+                <option value="十一月">十一月</option>
+                <option value="十二月">十二月</option>                
+            </select>
+
+            <br>
+            <!-- 對準 input 的list 還有 datalist 的 id 但 input 的name id 不要跟這個一樣-->
+            <label for="area">所在地區 :</label>
+            <input list= "arealist" type="text" name="area" id="area">
+            <datalist id="arealist">
+                <option value="台北市">台北</option>
+                <option value="新北市">新北</option>
+                <option value="南部">南部</option>
+
+            </datalist>
+            <br>
+            <label for="suggestion"> 給網站的建議 :</label>
+            <br>
+            <!-- textarea 的 設定 cols rows 數量 改變大小-->
+            <textarea name="suggestion" 
+            id="suggestion" 
+            cols="30" 
+            rows="10"
+            placeholder="感謝提供建議"
+            ></textarea>
+            <br>
+            <button type="submit">提交表單</button> <!--button 應該要放在 form 內-->
+  
+    
+    </body>
+
+</html>

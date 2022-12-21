@@ -1,0 +1,28 @@
+{
+  "name": "second_big_project",
+  "version": "1.0.0",
+  "description": "This is for mongoose and express tpgether\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[o",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudunoyume/Second_project.git"
+  },
+  "author": "DUDU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudunoyume/Second_project/issues"
+  },
+  "homepage": "https://github.com/dudunoyume/Second_project#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.5.4",
+    "nodemon": "^2.0.19"
+  }
+}

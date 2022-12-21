@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="something" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DuDu" />
+    <!-- <base target="_blank"/> -->
+
+    <!-- icon region -->
+    <link rel="shortcut icon" href="" />
+    <link rel="bookmark" href="" />
+
+    <!-- google font 的設定  放在 stylesheet前面-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font 的設定  end -->
+
+    <!-- CSS設定 -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title><%= data.name%></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Student ID</td>
+        <td><%=data.id%></td>
+      </tr>
+      <tr>
+        <td>Fullname</td>
+        <td><%= data.name %></td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td><%=data.age%></td>
+      </tr>
+      <tr>
+        <td>Merit Scholarship</td>
+        <td><%= data.scholarship.merit %></td>
+      </tr>
+      <tr>
+        <td>Other Scholarship</td>
+        <td><%=data.scholarship.other %></td>
+      </tr>
+      <tr>
+        <td>Total Scholarship</td>
+        <td><%= data.scholarship.merit + data.scholarship.other %></td>
+      </tr>
+    </table>
+    <a href="/student">Home</a>
+  </body>
+  <script src="./app.js"></script>
+</html>

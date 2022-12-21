@@ -1,0 +1,171 @@
+/* external css 就是用外部的文件進行設定 */
+/* 必須在要使用這頁的網頁裡打上連結的語法 */
+/* <link rel = "stylesheet" href="./style.css"  */
+
+/* 
+顏色的設定
+reserved color 顏色名
+rgb (紅,藍,綠,透明度) 
+rgba 透明度 0~1
+hexadecimal 16進制   0123456789abcdef
+*/
+
+/*reserved color 顏色名 */
+h3 {
+  color: blue;
+}
+
+/*rgb (紅,藍,綠,透明度)  */
+ol,
+ul {
+  color: rgb(27, 100, 210, 0.7);
+  font-style: italic;
+}
+
+/*hexadecimal*/
+
+a {
+  color: #19c58c;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/*hsl*/
+
+ul {
+  color: hsl(159, 15%, 30%);
+  font-style: italic;
+}
+
+p {
+  font-size: 24px;
+  text-decoration: underline;
+}
+/* 可以用 font family 直接使用組合設定
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+*/
+/* 
+
+universal selector  全部
+米字鍵
+
+{
+  color: hsl(159, 15%, 30%);
+  font-style: italic;
+}
+
+
+*/
+
+/*
+element selector 選擇標籤
+
+ul {
+  color: hsl(159, 15%, 30%);
+  font-style: italic;
+}
+*/
+
+/*
+element selector 選擇指定標籤id
+一個 html 只能有一個 id 不過可以有多個class
+
+id selector 指定id
+前面要加井號
+
+#arealist {
+  color: rgb(62, 135, 155);
+}
+
+*/
+
+/*
+選擇特定類別
+
+class selector
+
+前面要加一點
+
+.news {
+  color: rgb(62, 135, 155);
+}
+
+
+*/
+
+/*
+可以同時使用兩個selector 必須符合這這兩項東西的才能套用設定
+*/
+
+table.largetext {
+  color: rgb(62, 135, 155);
+}
+
+.bigtext {
+  font-size: 1.2rem;
+}
+
+/* grouping selcetor ---------------------------------------------------------------------------------------------------------------------------------------------*/
+/*  以逗點直接相連相同樣式的設定*/
+h1,
+h2 {
+  color: orange;
+}
+
+/**descendent selector 後裔**/
+
+div.link1 a {
+  color: cornflowerblue;
+}
+
+div.link2 a {
+  color: rgb(116, 85, 23);
+}
+
+/*attriube selector*/ /* pseudo class*/
+
+input[type="text"]:active {
+  color: blue;
+}
+
+/* pseudo element--------------------------------------------------------------------------------------------------------------------------------------------------*/
+p::first-letter {
+  font-size: 2.5rem;
+}
+
+/* 加前置文字--------------------------------------------------------------------------------------------------------------------
+p::before {
+  content: ">>";
+  color: brown;
+}
+
+h2::after {
+  content: "<<";
+  color: blueviolet;
+}
+
+#tele {
+  color: aquamarine;
+}
+*/
+
+/*設定Background-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*
+body {
+  background-image: url("https://static.wikia.nocookie.net/virtualyoutuber/images/6/60/Amane_Kanata_-_Tokusya-Seizon_Wonder-la-der%21%21_cover.png/");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+*/
+
+body {
+  background: url("https://pbs.twimg.com/media/E9JjDpvVUAkUuCy.jpg?name=orig")
+    no-repeat rgb(255, 255, 255, 0.5);
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+
+/* background-blend-mode 替背景加上 透明遮罩 混合顏色*/

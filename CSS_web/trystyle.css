@@ -1,0 +1,144 @@
+h1.heading {
+  /*content, margin, border, width, height*/
+  background-color: black;
+  color: white;
+  /* width height 可以用相對的視窗大小來設定 vw vh---------------------------- */
+  width: 50vw;
+  height: 30vh;
+  /* 設定方式跟pedding一樣 */
+  margin: 1rem;
+}
+
+button.example {
+  /* 到最放上方的距離 */
+  /* padding-top: 1rem; */
+  /* 可以直接用   padding 來寫  -------------------------------------------------------------------------------------------------------------------------------- */
+  /* 上、右、下、左的順序   */
+  /* 或是 上下、左右  */
+  /* 或是 上下左右 */
+  padding: 1rem 3rem 2rem 5rem;
+  /* padding: 2rem 4rem; */
+  /* padding: 4rem; */
+}
+
+/* vw,vh % */
+
+div.box1 {
+  width: 50vw;
+  height: 50vh;
+  background: black;
+}
+
+/* 這邊的 % 數是相對於 parent 的長寬而言的 */
+div.box2 {
+  width: 50%;
+  height: 50%;
+  background: cyan;
+}
+
+div.container {
+  width: 500px;
+  height: 500px;
+
+  background-color: rgb(229, 127, 255);
+  position: relative;
+}
+
+/* 用transition + translate 達到平滑移動的效果 */
+div.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: absolute;
+  /* translate 的另一個用法是用來把box 定位在正中央 ，因為top left 是依據邊界的距離，等於
+  是用左上角來定位， translate可以把它定位回去*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+div.box:hover {
+  transform: translate(100px, 100px);
+}
+
+div.container_1 {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(142, 255, 127);
+  overflow: scroll;
+}
+
+/* 用transition + translate 達到平滑移動的效果 */
+div.box_1 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(39, 25, 223);
+  position: relative;
+  top: 200px;
+  left: 200px;
+  transition: all 1s;
+}
+
+/* 用rotate 用以旋轉   scale 用以放大縮小*/
+/* rotateXYZ 用以 3D旋轉 */
+div.box_1:hover {
+  transform: rotate(-90deg) scale(1.5) rotateX(45deg);
+}
+
+/* keyframes ,animationn-name, animation duration */
+/* 用以設定較為複雜的動畫效果，先設定動畫效果 */
+
+@keyframes cross {
+  from {
+    background-color: darkcyan;
+    top: 0;
+    left: 0;
+  }
+
+  to {
+    background-color: red;
+    top: 400px;
+    left: 400px;
+  }
+}
+
+div.anime {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(142, 255, 127);
+  overflow: hidden;
+}
+
+div.aa {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(39, 25, 223);
+  position: relative;
+  /* 動畫名 */
+  animation-name: cross;
+  /* 動畫持續秒速 */
+  animation-duration: 2s;
+  /* 動畫延遲秒速 */
+  animation-delay: 1s;
+  /* 動畫 的 time function */
+  /* animation-timing-function: ease-in; */
+  /* 動畫會一直播 或 設定數字 來 實現 次數*/
+  /* animation-iteration-count: infinite; */
+  /* 動畫方向 ，這個設定會來回播*/
+  /* animation-direction: alternate; */
+  /* 停在動畫終端 */
+  animation-fill-mode: forwards;
+}
+
+div.aa2 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(223, 25, 147);
+  position: relative;
+  /* 可以將邊緣變成比較圓的 */
+  border-radius: 15px;
+
+  /* 動畫縮寫 */
+  animation: cross 5s ease-in infinite alternate;
+}

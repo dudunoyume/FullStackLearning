@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--標題設定------------------標題設定---------------------標題設定------------------標題設定------------------標題設定------------------標題設定--------------->
+<html lang = "zh-Hant"> <!--設定給其他人看的文字標註，不過並不影響 html內部程式-->
+    <head> <!-- 這個網站預設的設定-->
+        <meta charset = "utf-8"/> <!--文字編碼設定，盡量用utf-8 -->
+        <meta name = "viewport" content = "width=device-width , initial-scale=1"/> 
+        <!-- viewpoint 就是視窗的意思， content 設定的是  網頁的寬度就是 device 的 寬度， scale = 1 的意思 是 初始的長寬不變-->
+        <title>angel</title> <!-- 網頁tag上方的 名字-->
+
+        <meta name = "robots" content = "index, follow"/>  <!-- 讓google更容易找到你的網站，  index, follow 使搜尋引擎找的到你的網站-->
+        <meta name = "description" content="神奇的大姊姊"/> <!-- 用 google 搜尋時 於搜尋介面的網頁連結 下方的描述，但不出現在網頁裡 -->
+        <meta name= "author" content="張逸民"/> <!-- 標註作者 -->
+        <!-- <base target="_blank"/>  設定 點擊超連結都會 在新頁面開啟連結 -->
+        <base target="_self"/>
+
+        <!--   網頁的Tag 上 左側的 icon------------------------------------------------->
+        <link rel="shortcut icon" href="./angel.png"/>
+        <link rel="bookmark" href="./angel.png"/>
+        <link rel="stylesheet" href="./styles/style.css">
+
+
+        <!-- css 的 註解   設定 table th td 有框線-->
+        <!-- 前面是要指定的 標籤 table th td 然後在後面接 {  } -->
+        <!-- interal styling 在head 裡這種做法可以直接設定整個 環境裡的 style  ------------------------------------------------------------------------------------------------------>
+<!--         
+        <style> table,th,td{
+            border-collapse: collapse;
+            border: 1px solid black;}
+            
+            th,td{
+                padding : 0.25rem
+            }
+
+
+        </style>
+
+       -->
+
+    </head>
+
+    
+<body>
+
+<!-- class 設定為當 css javascript 需要讀取時的名稱-->
+<!-- 用 tyle 設定 屬性-->
+<!-- css 的 linestyling 直接在標籤裡打 style 的 css -----------css--------------------------css---------------css-----------------css---------------------------------------------------->
+<h1
+ class = "heading" 
+ style="color: cyan;"
+ >
+ 天音彼方
+</h1>
+
+<h2>目錄</h2>
+<ol>
+    <li><a href="#head">天界學園放送部</a></li>
+    <li><a href="#intro">簡介</a></li>
+    <li><a href="#activity">活動歷程</a></li>
+    <li><a href="#net">HOLO天音表格</a></li>
+    <li><a href="#form">相關網址</a></li>
+</ol>
+
+<h2 id="head">天界學園放送部</h2>
+
+<!-- <p> 是分段段落 -->
+<p>天音彼方（日語：天音かなた／あまね かなた Amane Kanata */?、4月22日[2] - ）是日本的虛擬YouTuber、虛擬偶像。
+    所屬事務所為Hololive Production[2]，為Hololive四期生的成員[3]。
+    又被粉絲稱為「PP（PowerPoint）天使」[3][4][5]、大猩猩。[4][5]與同為四期生的桐生可可同居。
+</p>
+
+ <!-- style 圖片大小 src 來源    alt 是另外一個選項的意思 當他找不到圖片的時候，替代的文字-->
+ <!-- 在img tag 裡面的是 inline styling -->
+<img style="width: 100%; height: 100%; max-width: fit-content; max-height: fit-content;" src=" ./amane.jpg" alt="天音彼方" id = "天音彼方"/>
+<img style="width: 100%; height: 100%; max-width: fit-content; max-height: fit-content;" src="./Kiryu_Coco.png" alt="桐生可可" id="桐生可可"/>
+
+<!--一 重要程度來排序 h1~h6 因為 字的大小可以被css 所改變， 而 因為沒有 h7 所以如果出現h7， html 自動把他換成段落 -->
+<h2 id="intro">簡介</h2>
+<h3>角色設定</h3>
+<p id = "xtext">天界学園に通う天使。人を癒すための研究をしている。
+    恥ずかしがりやな性格を隠すために、クールを装おうとする。
+    天界学园上学的天使。正进行着治愈人类的研究。
+    为了掩盖自己怕羞的性格、装成很酷的样子。
+</p>
+
+
+<h3 id="activity">
+活動歷程</h3>
+
+<!-- 排序的 list  ol 為有數字的， ul 為沒數字的 以點在前面-->
+
+<ol>
+    <p>2019 :</p>
+    <li>12月25日，hololive宣布四期生的出道，分别为天音彼方、桐生可可、角卷绵芽、常暗永远、姬森璐娜。同日推特和YouTube频道开始公开[2]。
+        按照告知，天音彼方、桐生可可、角卷绵芽三人于12月25日当日按照顺序开始活动。常暗永远、姬森璐娜则在2020年1月1日方才开始活动。
+        同日天音彼方推特开始活动，发表第一条推文[3]。</li>
+    <li>12月27日，在YouTube平台进行初直播</li>
+</ol>
+<ul>
+    <p>2020 :</p>
+    <li>2月8日，YouTube频道订阅数达到10万</li>
+    <li>2月9日，YouTube频道收益通过</li>
+    <li>3月29日因耳疾复发住院[11]，3月31日出院，4月1日发布复活直播[12]。</li>
+</ul>
+<!-- -->
+
+
+
+<!--------------------表格------------------表格---------------------------表格--------------------表格------------------------------------表格-------------------------表格--->
+<!-- 
+table 設定 一個 table 
+tr 是 table row 的意思
+th 是 table head 表格 colname
+td 是 table data 是 表格的data的意思 
+
+colspan 可以將一格 跨越 col 等於 excel 上 合併儲存格的意思
+rowspan 可以將一格 跨越 row 等於 excel 上 合併儲存格的意思
+-->
+<!--以下其實沒有也沒關係 ，只是讓他人讀你的程式碼的時候比較了解的
+    thead 是表格標題
+    tbody 
+-->
+<!--
+    tfoot 標註最偉的表格行
+
+-->
+<h2 id="form"> HOLO天音表格</h2>
+<!-- class 想要添加多個就直接空一格 -->
+<table class = "largetext bigtext">
+    <thead>
+    <tr > 
+        <th colspan = 5>HOLO 推薦錄</th>
+    </tr> 
+    </thead>
+    <tbody>
+
+    <tr>
+        <th></th>
+        <th>期數</th>
+        <th>最推</th>
+        <th>次推</th>
+        <th>還好</th>
+    </tr>
+    <tr > 
+        <th rowspan = 7> 成員</th>
+    </tr>
+    <tr>
+        <td>0期生</td>
+        <td>ときのそら</td>
+        <td>星街すいせい</td>
+        <td>友人A</td>
+    </tr>
+    <tr>
+        <td>一期生</td>
+        <td>夏色まつり</td>
+        <td>白上フブキ</td>
+        <td>赤井はあと</td>
+    </tr>
+    <tr>
+        <td>二期生</td>
+        <td>大空スバル</td>
+        <td>夏色まつり</td>
+        <td>紫咲シオン</td>
+        
+    </tr>
+    <tr>
+        <td>三期生</td>
+        <td>宝鐘マリン</td>
+        <td>兎田ぺこら</td>
+        <td>白銀ノエル</td>
+    </tr>
+    <tr>
+        <td>四期生</td>
+        <td>天音かなた</td>
+        <td>桐生ココ</td>
+        <td>常闇トワ</td>
+    </tr>
+    <tr>
+        <td>五期生</td>
+        <td>獅白ぼたん</td>
+        <td>雪花ラミィ</td>
+        <td>桃鈴ねね</td>
+    </tr>
+    </tbody>
+</table>
+
+<!--------------------超連結-------------------超連結---------------------------超連結-----------------超連結------------------超連結-----------------超連結-----------------超連結--->
+
+<!-- Ctrl + / 可以直接把整行打好的變成標註 -->
+<!-- Ctrl + / 可以直接把整行打好的變成標註 -->
+
+
+<br> <!-- 中斷 文字強制換行-->
+<hr> <!-- 加入一條橫跨的線-->
+
+<!--enity word  可以用一些預設字符來打出 需要的符號 ----------------------------------->
+<!--字串比起圖片較好處理-->
+<h2>符號</h2>
+<p>&#9824; &#11161; &#9961; &#934; </p>
+
+<!-- anchor Tag  用來建立超連結-->
+<!--hyper textreferenc-->
+<h2 id="net">相關網址</h2>
+<div class="link1"> <!--div 是純容器，Block element 而且不帶任何效果，主要於CSS上使用-->
+<a href ="https://zh.wikipedia.org/wiki/%E5%A4%A9%E9%9F%B3%E5%BD%BC%E6%96%B9"
+    > 天音彼方維基頁面</a>
+
+<a href ="https://www.youtube.com/channel/UCZlDXzGoo7d44bwdNObFacg"
+    > 天音彼方youtube頁面</a>
+</div>
+<div class ="link2">
+    <a href ="https://twitter.com/amanekanatach"> 天音tiwtter頁面</a><br>
+    <a href ="https://zh.moegirl.org.cn/%E5%A4%A9%E9%9F%B3%E5%BD%BC%E6%96%B9"> 天音彼方萌娘百科頁面</a><br>
+    <a href ="https://www.hololive.tv/portfolio/items/amane-kanata">hololive kanata 網頁</a><br>
+    <br>
+    <a class = "survey" href ="./myform.html">天使問卷調查</a>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
