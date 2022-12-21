@@ -10,6 +10,7 @@ import {auth as authRoute, course as courseRoute} from "./routes/index.js";
 import passport from "passport";
 import passportFunction from "./config/passport.js";
 passportFunction(passport);
+import cors from "cors";
 
 mongoose
   .connect(process.env.DBConnect, {
@@ -30,6 +31,7 @@ mongoose
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(cors());
 app.use("/api/user", authRoute);
 app.use("/api/courses", passport.authenticate("jwt", {session: false}), courseRoute);
 
