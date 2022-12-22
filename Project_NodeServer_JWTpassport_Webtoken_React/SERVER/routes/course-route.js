@@ -24,6 +24,17 @@ router.get("/",(req,res) => {
     })
 })
 
+router.get("/instructor/:_instructor_id", (req, res) =>{
+    let {_instructor_id} = req.params;
+    Course.find({
+        instructor: _instructor_id
+    }).populate("instructor", ["username", "email"]).then((data) =>{
+        res.send(data);
+    }).catch(() =>{
+        res.status(500).send("Cannot get course data")
+    })
+})
+
 
 router.get("/:_id", (req,res) =>{
     let { _id } = req.params;
@@ -40,7 +51,9 @@ router.post("/", async (req,res) =>{
     //validate the inputs before making a new course
    
     const {error} = cousreValidation(req.body);
-    if(error) return res.status(400).send(error.details[0].meeasge);
+
+    //在這邊可以讓經過 JOI 的 error message 回傳一些的錯誤訊息
+    if(error) return res.status(400).send(error.details[0].message);
      
 
     let {title, description, price} = req.body;

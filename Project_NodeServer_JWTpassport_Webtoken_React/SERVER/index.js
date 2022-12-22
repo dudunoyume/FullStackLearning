@@ -33,6 +33,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 app.use("/api/user", authRoute);
+
+// 利用 jwt 保護 course 的資訊
 app.use("/api/courses", passport.authenticate("jwt", {session: false}), courseRoute);
 
 app.listen(8080,()=>{

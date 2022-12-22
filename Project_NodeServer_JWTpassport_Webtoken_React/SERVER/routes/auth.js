@@ -75,7 +75,7 @@ router.post("/login",(req,res)=>{
                     const token = jwt.sign(tokenObject, process.env.PASSPORT_SECERT);
                     res.send({success:true, token:"JWT " + token, user});
                 }else{
-                    res.send(401).send("Wrong passward.")
+                    res.status(401).send("Wrong passward.")
                 }
             })
         }
